@@ -1,6 +1,6 @@
 
 const NODEJS_IP = "http://10.99.41.107:3000";  // ← 改成 Node.js 所在電腦的 IP
-
+alert("NodeJS_IP = " + NODEJS_IP);
 function borrowUmbrella() {
     fetch(`${NODEJS_IP}/api/borrow`, {
         method: "POST",
@@ -22,4 +22,5 @@ function returnUmbrella() {
     .then(data => alert(data.message))
     .catch(err => alert("前端呼叫 Node.js 失敗：" + err));
 }
+
 
